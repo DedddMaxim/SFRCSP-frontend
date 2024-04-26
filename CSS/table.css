@@ -1,0 +1,128 @@
+/* ================ Меню навигации ================= */
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  /* Отображение поверх столбцов(для scroll) */
+  z-index: 1;
+}
+
+/* Контейнер с компонентами navbar */
+.container {
+  margin-right: 1%;
+  margin-left: 1%;
+}
+
+/* Кнопки в навигации */
+.blue-btn {
+  padding: 0.5em;
+  margin-right: 5px;
+  min-width: 2em;
+  border-radius: 0.5em;
+  background-color: rgb(110, 220, 255);
+}
+
+/* Кнопки Списки */
+.blue-dropdown {
+  /* Отступ из-за картинки стрелки */
+  padding-right: 1.5em;
+  width: 10em;
+  /* Скрытие длинного текста */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* Фон */
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  background-size: 0.7em;
+  background-image: url("/Resources/DropdownArrow.png");
+}
+
+/* Только в мобилках для выпадающего списка */
+@media (max-width: 767px) {
+  .blue-dropdown {
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+
+/*наведение, нажатие, фокус кнопок */
+.blue-btn:hover {
+  background-color: rgb(75, 206, 246);
+}
+.blue-btn:active {
+  background-color: rgb(66, 183, 218);
+}
+.blue-btn:focus {
+  box-shadow: 0 0 0 1.5px rgba(0, 0, 0, 0.803);
+}
+
+/* dropdown-item */
+.dropdown-item:hover {
+  background-color: rgb(235, 235, 235);
+}
+.dropdown-item:active {
+  color: black;
+}
+
+/* ==================== Таблица ======================= */
+
+table {
+  text-align: center;
+  font-size: 12px;
+  /* Делаем границы для каждой ячейки */
+  border-collapse: separate;
+  /* Пространство между ячейками */
+  border-spacing: 0;
+}
+
+/* Родитель таблицы */
+.container-fluid {
+  padding: 0;
+  /* Смещение из-за fixed navbar */
+  transform: translateY(50px);
+  height: calc(100vh - 50px);
+  width: 100vw;
+  overflow: auto;
+}
+
+thead {
+  /* Отображение поверх столбцов(для scroll) */
+  position: relative;
+  z-index: 1;
+}
+
+.table th,
+.table td {
+  /* Цвет границ ячеек */
+  border: 1px solid rgb(200, 200, 200);
+}
+
+.table th {
+  /* Цвет ячеек заголовков */
+  background-color: rgb(236, 236, 236);
+}
+
+/* Блокировка переноса текста*/
+.table td,
+table tbody th {
+  text-wrap: nowrap;
+}
+
+/* Глаз для скрытия */
+.img-eye-open,
+.img-eye-close {
+  height: 1.3em;
+  vertical-align: middle;
+}
+/* Изменение курсора */
+.img-eye-open:hover,
+.img-eye-close:hover {
+  cursor: pointer;
+}
+
+/* input в ячейках таблицы */
+td form input {
+  width: 2em;
+}

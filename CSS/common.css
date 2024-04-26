@@ -1,0 +1,23 @@
+/* Общее */
+body {
+  background-color: rgb(110, 220, 255);
+}
+h1 {
+  margin-bottom: 0.5em;
+  font-size: 2em;
+}
+
+/* Собственные стили */
+.rounded-img {
+  width: 70%;
+  border-radius: 1em;
+  margin-bottom: 1em;
+}
+.container-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1em;
+  border-radius: 1em;
+}
